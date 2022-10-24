@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.(scss)$/,
-        use: [
+        use: [          
           {
             loader: 'style-loader'
           },
@@ -37,7 +37,21 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[contenthash].[ext]'
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'url-loader',
+        options: {
+          name: '[contenthash].[ext]'
+        }
+      },
     ]
   }
 }

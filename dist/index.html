@@ -1,15 +1,508 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap w/ Webpack</title>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Webpack!</h1>
-      <button class="btn btn-primary">Primary button</button>
+    
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../src/images/logo.svg" alt="시티캅케어 로고"/>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="navbar" aria-labelledby="navbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">&nbsp;</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">시티캅케어</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">서비스</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">포트폴리오</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">고객지원</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">해충 신문고</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">MY 시티캅케어</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+            </ul>
+
+            <a class="icon_insta " href="#" title="Instagram">
+              <img src="../src/images/icon_insta.png" alt="Instagram">
+            </a>
+
+            <!-- <form class="d-flex mt-3 mt-lg-0" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+
+  </header>
+
+  <!-- main -->
+  <main id="content" role="main">
+
+    <div class="banner_side">
+      <img src="../src/images/icon_phone.svg" alt="" />
+      <span>1688 &middot; 9112</span>
     </div>
+    <div class="banner_bottom ">
+      <div class="bn_1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="해충방제">
+        <img src="../src/images/icon_m01.svg" alt=""/>
+        <span>해충방제</span>
+      </div>
+      <div class="bn_1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="살균/소독">
+        <img src="../src/images/icon_m02.svg" alt=""/>
+        <span>살균/소독</span>
+      </div>
+      <div class="bn_1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="표면항균코팅">
+        <img src="../src/images/icon_m03.svg" alt=""/>
+        <span>표면항균코팅</span>
+      </div>
+      <div class="bn_1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="장비임대">
+        <img src="../src/images/icon_m04.svg" alt=""/>
+        <span>장비임대</span>
+      </div>
+      <div class="bn_2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="생활 속 주변의 해충(보행해충/ 비례해충 /쥐)을 사진과 함께 게시글의 작성 예시를 참고하여 작성해주시면 답변 및 매주 1개의 게시글을 확인해 무료로 해충방제를 해드리겠습니다.">        
+        <h3>해충신문고</h3>
+        <span class="d-sm-none d-xl-none d-xxl-block">생활 속 주변의 해충(보행해충/ 비례해충 /쥐)을 사진과 함께 게시글의 작성 예시를 참고하여 작성해주시면 답변 및 매주 1개의 게시글을 확인해 무료로 해충방제를 해드리겠습니다.
+        </span>
+        <button class="bn_2_btn" />        
+      </div>
+    </div>
+    
+
+    <!-- Main Visual -->
+    <section class="hero">
+      <div id="main_slide" class="carousel slide carousel-fade d-flex w-100 h-100" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">            
+            <img class="img_item" src="../src/images/hero_img_04.png" alt="">
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>공간 살균 케어 솔루션</h1>
+              <p>
+                인체에 무해한 약재 사용으로 안전한 바이러스케어
+              </p>
+              <a href="#" class="btn">자세히 보기</a>
+              <span class="bg_line"></span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img_item" src="../src/images/hero_img_03.png" alt="">
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>통합해충방제 솔루션</h1>
+              <p>
+                전문방역원이 진단 1:1 맞춤해충방제 솔루션
+              </p>
+              <a href="#" class="btn">자세히 보기</a>
+              <span class="bg_line"></span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img_item" src="../src/images/hero_img_02.png" alt="">
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>표면항균코팅 솔루션</h1>
+              <p>
+                3개월 지속되는 물리적 사멸기법의 새로운 차단방역
+              </p>
+              <a href="#" class="btn">자세히 보기</a>
+              <span class="bg_line"></span>
+            </div>
+          </div>
+          <!-- <div class="carousel-item">
+            <video class="img_item" autoplay muted loop id="myVideo">
+              <source src="./images/video_01.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>표면항균코팅 솔루션</h1>
+              <p>
+                3개월 지속되는 물리적 사멸기법의 새로운 차단방역
+              </p>
+              <a href="#" class="btn btn-outline-light btn-lg">explore tours</a>
+              <span class="bg_line"></span>
+            </div>
+          </div> -->
+          <div class="carousel-item">
+            <img class="img_item" src="../src/images/hero_img_04.png" alt="">
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>장비렌탈케어 솔루션</h1>
+              <p>
+                첨단장비를 활용한 해충방제 및 위생관리 케어 솔루션
+              </p>
+              <a href="#" class="btn">자세히 보기</a>
+              <span class="bg_line"></span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img_item" src="../src/images/hero_img_05.png" alt="">
+            <span class="img_item_upper"></span>
+            <div class="title_box">
+              <h1>HACCP/위생등급제 컨설팅</h1>
+              <p>
+                해썹 및 위생등급제 등록 관련 커설팅
+              </p>
+              <a href="#" class="btn">자세히 보기</a>
+              <span class="bg_line"></span>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#main_slide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#main_slide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    
+      
+    
+    
+    </section>
+
+    <!-- 상단 배너 : 환경 위생 컨설팅 , 셀프방역 / 방제 장비렌탈, 몰래 카메라 탐지 -->
+    <section class="section_01">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-lg-4 d-flex justify-content-around">
+            <div class="sec_card d-flex flex-column" >
+              <img src="../src/images/icon_sec1_1.svg" alt="">
+              <p>Environmental hygiene</p>
+              <h3>환경 위생 컨설팅</h3>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 d-flex justify-content-around">
+            <div class="sec_card d-flex flex-column">
+              <img src="../src/images/icon_sec1_2.svg" alt="">
+              <p>Care Equiment Rental</p>
+              <h3>셀프방역 / 방제 장비렌탈</h3>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 d-flex justify-content-around">
+            <div class="sec_card d-flex flex-column">
+              <img src="../src/images/icon_sec1_3.svg" alt="">
+              <p>Hidden Camera Detection</p>
+              <h3>몰래 카메라 탐지</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 시티캅케어 런칭 프로모션 -->
+    <section class="section_02">
+      <div class="container">
+        <div class="section_title">
+          <p>LAUNCHING  promotion</p>
+          <h2>시티캅케어 런칭 프로모션</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 sec_card_wrap">
+            <div class="sec_card flex-xl-column flex-xxl-row">
+              <div class="sec_img">
+                <img src="../src/images/img_2_1.png" alt=""/>
+              </div>            
+              <div class="sec_card_txt">
+                <span>무료서비스 </span>
+                <p>무료 차단방역<br>
+                진단 및 최대할인</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 sec_card_wrap">
+            <div class="sec_card flex-xl-column flex-xxl-row">
+              <div class="sec_img">
+                <img src="../src/images/img_2_2.png" alt=""/>
+              </div> 
+              <div class="sec_card_txt">
+                <span>슈퍼세이브</span>
+                <p>타사보안 서비스<br>
+                  이용고객 대상</p>
+              </div>  
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 sec_card_wrap">
+            <div class="sec_card flex-xl-column flex-xxl-row">
+              <div class="sec_img">
+                <img src="../src/images/img_2_3.png" alt=""/>
+              </div> 
+              <div class="sec_card_txt">
+                <span>회원 할인</span>
+                <p>기존 회원<br>
+                  신규 회원</p>
+              </div> 
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6 sec_card_wrap">
+            <div class="sec_card flex-xl-column flex-xxl-row">
+              <div class="sec_img">
+                <img src="../src/images/img_2_4.png" alt=""/>
+              </div> 
+              <div class="sec_card_txt">
+                <span>결합할인</span>
+                <p>보안 + 방역<br>
+                  해충 + 렌탈</p>
+              </div> 
+            </div>
+          </div>
+        </div>                
+      </div>
+    </section>
+    
+    
+
+    <!-- 차단 방역 케어 -->
+    <section class="section_03">
+      <div class="container">
+        <div class="section_title">
+          <p>care services</p>
+          <h2>차단 방역 케어</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 p-2 ">
+            <a href="#" class="sec_card">
+              <div class="sec_img">
+                <img src="../src/images/img_3_1.png" alt=""/>
+              </div>
+                
+                <div class="sec_card_txt" >
+                  <h3>프리미엄 해충방제 케어</h3>
+                  <p>전문가의 정확한 진단<br>
+                    고객 맞춤 방제 솔루션<br>
+                    초기 집중방제와 정기 관리</p>
+                </div>  
+              </a>
+          </div>
+          <div class="col-sm-12 col-lg-6 p-2">
+            <a href="#" class="sec_card">
+              <div class="sec_img">
+                <img src="../src/images/img_3_2.png" alt=""/>
+              </div>
+                
+                <div class="sec_card_txt" >
+                  <h3>공간 살균 케어</h3>
+                  <p>멸균 알칼리 이온수 사용<br>
+                    99.99%의 물로 이루어져 청소 불필요<br>
+                    코로나 바이러스 제거 살균실험 성적서 보유</p>
+                </div>  
+              </a>
+          </div>
+          <div class="col-sm-12 col-lg-6 p-2">
+            <a href="#" class="sec_card">
+              <div class="sec_img">
+                <img src="../src/images/img_3_3.png" alt=""/>
+              </div>                
+                <div class="sec_card_txt" >
+                  <h3>표면 항균 보호막 케어</h3>
+                  <p>표면 항균 보호막 생성 - 3개월 지속<br>
+                    접촉 감염균 관리</p>
+                </div>  
+              </a>
+          </div>
+          <div class="col-sm-12 col-lg-6 p-2">
+            <a href="#" class="sec_card">
+              <div class="sec_img">
+                <img src="../src/images/img_3_4.png" alt=""/>
+              </div>                
+              <div class="sec_card_txt" >
+                <h3>몰래 카메라 탐지</h3>
+                <p>#숙박시설 #사무실,회의실 #연구소,<br>
+                  연구실 # 중요보안시설 #여성전용시설<br>
+                  #탈의실, 화장실 #범죄예방</p>
+              </div>  
+              </a>
+          </div>
+        </div>     
+      </div>
+    </section>
+
+
+
+    <!-- 차단 방역전문 기업 -->
+    <section class="section_04">      
+      <div class="container">
+        <div class="section_title">
+          <p>BIO SECURITY</p>
+          <h2>차단 방역전문 기업</h2>
+        </div>
+        <div class="row sec4_line">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-around">
+            <div class="d-flex flex-column align-items-center" >
+              <div class="icon_circle">
+                <img src="../src/images/icon_sect2_01.svg" alt="">
+              </div>
+              
+              <h3>25년간 부산 지역을<br>
+                지켜온 브랜드</h3>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-around">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon_circle">
+                <img src="../src/images/icon_sect2_02.svg" alt="">
+              </div>              
+              
+              <h3>셀프방역 / 방제 장비렌탈</h3>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-around">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon_circle">
+                <img src="../src/images/icon_sect2_03.svg" alt="">
+              </div>  
+              
+              <h3>몰래 카메라 탐지</h3>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-around">
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon_circle">
+                <img src="../src/images/icon_sect2_04.svg" alt="">
+              </div>  
+              
+              <h3>몰래 카메라 탐지</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 셀프 방역 / 방제 장비렌탈 -->
+    <section class="section_05">
+      <div class="container">
+        <div class="section_title">
+          <p>CARE EQUIPMENT RENTAL</p>
+          <h2>셀프 방역 / 방제 장비렌탈</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md col-xl-3 p-2">
+            <a class="sec_card " href="#">
+              <img src="../src/images/machine_01.png" alt=""/>
+              <span>전격살충기</span>              
+            </a>            
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3 p-2">
+            <a class="sec_card " href="#">
+              <img src="../src/images/machine_02.png" alt=""/>
+              <span>항균기</span>              
+            </a>            
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3 p-2">
+            <a class="sec_card " href="#">
+              <img src="../src/images/machine_03.png" alt=""/>
+              <span>포충기</span>              
+            </a>            
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3 p-2">
+            <a class="sec_card " href="#">
+              <img src="../src/images/machine_04.png" alt=""/>
+              <span>손세정기</span>              
+            </a>            
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 위드 코로나 시대! -->
+    <section class="section_06">
+      <div class="d-flex flex-column align-items-center mx-auto my-5 py-5">
+        <h2>위드 코로나 시대! </h2>
+        <h3>이제 차단 방역 전문 시티캅케어와 함께 하세요!</h3>
+        <span></span>
+        <p>상가 & 아파트, 관공서 / 공공기관, 요식업 / 프랜차이즈, 학교 / 교육시설, 숙박업 / 게스트하우스,<br>
+          헬스장 / 운동시설, 일반가정홈케어, 카페 등 바이러스, 세균, 해충으로부터 당신을 지키겠습니다. </p>
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 logo">
+          <img src="../src/images/logo_dark.svg" alt=""/>
+        </div>
+            <ul class="col-sm-6 col-md-4 col-lg-3 info ">
+              <li>부산광역시 남구 지성로 152 <br>
+                (문현동, 한일오피스텔 3층)
+                </li>
+              <li>Email: admin@domain.com</li>
+              <li>Fax: 051) 647-1004</li>
+              <li>© 시티캅케어</li>
+
+            </ul>
+            <ul class="col-sm-6 col-md-4 col-lg-3 menu">
+              <li><a href="">시티캅케어</a></li>
+              <li><a href="">서비스</a></li>
+              <li><a href="">포트폴리오</a></li>
+              <li><a href="">고객지원</a></li>
+              <li><a href="">해충 신문고</a></li>
+              <li><a href="">MY 시티캅케어</a></li>
+            </ul>
+            <div class="col-sm-6 col-md-4 col-lg-3 call">
+              <p>무료 정밀진단</p>
+              <span >1688-9112</span>
+              <div>
+                <img src="../src/images/icon_insta.png" alt="instagram" />
+              </div>
+            </div>
+        
+      </div>
+    </div>    
+    
+  </footer>
     <script src="./main.js"></script>
   </body>
 </html>
